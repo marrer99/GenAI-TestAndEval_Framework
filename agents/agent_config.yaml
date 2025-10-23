@@ -1,0 +1,8 @@
+# Sample agent configuration
+name: sample-agent
+description: Agent with tools and safety settings
+tools:
+  - name: custom_tool
+    path: ../prompts/answering/tools.py
+safety:
+  content_filter: enabled

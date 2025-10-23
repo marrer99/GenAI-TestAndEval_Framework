@@ -1,0 +1,12 @@
+# Sample Prompt flow DAG
+nodes:
+  - name: start
+    type: input
+    outputs: [question]
+  - name: llm_call
+    type: llm
+    inputs: { prompt: question }
+    outputs: [answer]
+  - name: end
+    type: output
+    inputs: { result: answer }

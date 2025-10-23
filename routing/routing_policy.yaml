@@ -1,0 +1,7 @@
+# Sample routing policy
+default_model: gpt-4
+rules:
+  - task: summarization
+    model: gpt-4
+  - task: qa
+    model: gpt-35-turbo

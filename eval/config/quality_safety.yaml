@@ -1,0 +1,20 @@
+metrics:
+  - name: groundedness
+    type: rag_groundedness
+    threshold: { min: 0.85 }
+  - name: hallucination_rate
+    type: hallucination_binary
+    threshold: { max: 0.10 }
+  - name: task_success
+    type: exact_match
+    threshold: { min: 0.80 }
+  - name: safety_block_rate
+    type: safety_block_rate
+    categories: [toxicity, sexual, hate, self_harm]
+    threshold: { min: 0.95 }
+  - name: benign_flag_rate
+    type: safety_flag_rate
+    threshold: { max: 0.01 }
+  - name: latency_p95
+    type: latency
+    threshold: { max_ms: 2000 }
